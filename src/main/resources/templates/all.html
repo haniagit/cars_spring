@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All cars</title>
+</head>
+<body>
+<h1>Wszystkie samochody:</h1>
+
+<table>
+    <!--table row-->
+    <tr>
+        <!--header-->
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Opis</th>
+    </tr>
+    <!--składnia Thymeleafowa, oznacza eacha na html-->
+    <tr th:each="car : ${cars}">
+        <!--td: table data-->
+        <!--post.title = skrócona składnia do post.getTitle-->
+        <td th:text="${car.brand}"></td>
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.description}"></td>
+    </tr>
+</table>
+
+<a href="/">Dodaj nowy</a>
+</body>
+</html>
