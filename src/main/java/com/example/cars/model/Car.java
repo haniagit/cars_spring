@@ -8,14 +8,8 @@ public class Car {
     private String brand;
     private String model;
     private String description;
-    private static List<Car> cars = new ArrayList<>(); //zmienna statyczna jest taka sama dla wszystkich obiektów
 
     public Car() {
-        cars.add(this);
-    }
-
-    public static List<Car> findAll(){
-        return cars;
     }
 
     public Car(String brand, String model, String description) {
